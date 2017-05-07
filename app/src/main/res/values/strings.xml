@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CustomDrawingApp</string>
+    <string name="clear_button">X</string>
+</resources>

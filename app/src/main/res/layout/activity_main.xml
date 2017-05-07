@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jrwoj.customdrawingapp.MainActivity"
+    android:weightSum="100">
+
+
+    <com.example.jrwoj.customdrawingapp.DrawingView
+        android:id="@+id/drawing"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/red_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/orange_button"
+            android:layout_toLeftOf="@+id/orange_button"
+            android:layout_toStartOf="@+id/orange_button"
+            android:layout_weight="0.2"
+            android:background="@color/Red"
+            android:onClick="paintClicked"
+            android:tag="@color/Red"
+            android:text="" />
+
+        <Button
+            android:id="@+id/orange_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/blue_button"
+            android:layout_toStartOf="@+id/blue_button"
+            android:layout_weight="0.2"
+            android:background="@color/Orange"
+            android:onClick="paintClicked"
+            android:tag="@color/Orange"
+            android:text="" />
+
+        <Button
+            android:id="@+id/blue_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/green_button"
+            android:layout_toStartOf="@+id/green_button"
+            android:layout_weight="0.2"
+            android:background="@color/SkyBlue"
+            android:onClick="paintClicked"
+            android:tag="@color/SkyBlue"
+            android:text="" />
+
+        <Button
+            android:id="@+id/green_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/clear_button"
+            android:layout_toStartOf="@+id/clear_button"
+            android:layout_weight="0.2"
+            android:background="@color/Green"
+            android:onClick="paintClicked"
+            android:tag="@color/Green"
+            android:text="" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.2"
+            android:onClick="resetClicked"
+            android:text="@string/clear_button" />
+
+    </LinearLayout>
+
+</RelativeLayout>
